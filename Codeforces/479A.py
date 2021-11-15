@@ -1,0 +1,10 @@
+INPUT = []
+FINAL_SUM = 0
+for x in range(3): INPUT.append(int(input()))
+if INPUT[0] * INPUT[1] > INPUT[0] + INPUT[1]: FINAL_SUM = INPUT[0] * INPUT[1]
+else: FINAL_SUM = INPUT[0] + INPUT[1]
+if FINAL_SUM * INPUT[2] > FINAL_SUM + INPUT[2]: FINAL_SUM = FINAL_SUM * INPUT[2]
+else: FINAL_SUM = FINAL_SUM + INPUT[2]
+if INPUT[0] * (INPUT[1] + INPUT[2]) > FINAL_SUM: FINAL_SUM = INPUT[0] * (INPUT[1] + INPUT[2])
+print(FINAL_SUM)
+
