@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> //WTF THIS SHIT FAILED ON TEST CASE 20000000000 ;-;
 int main(void) {
 	int t, n, k;
 	scanf("%d", &t);
