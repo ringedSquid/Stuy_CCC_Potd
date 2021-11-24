@@ -1,35 +1,13 @@
 def unbeatable(peacocks):
-    init_l = len(peacocks)
-    unb = 1
-    while len(peacocks) > unb:
-        winners = []
-        for x in range(len(peacocks)-1):
-            if peacocks[x][0] >= peacocks[x+1][0] and peacocks[x][1] >= peacocks[x+1][1]:
-                if peacocks[x][0] == peacocks [x+1][0] and peacocks[x][1] == peacocks[x+1][1]:
-                    unb += 1
-                else:
-                    winners.append(peacocks[x])
-            
+    w = len(peacocks)
+    for x in range(len(peacocks)):
+        for y in range(len(peacocks)):
+            if peacocks[x][0] < peacocks[y][0] and peacocks[x][1] < peacocks[y][1]:
+                w -= 1
+                peacocks[x] = [0, 0]
+                break
 
-            if peacocks[x+1][0] >= peacocks[x][0] and peacocks[x+1][1] >= peacocks[x][1]:
-                if peacocks[x+1][0] == peacocks [x][0] and peacocks[x+1][1] == peacocks[x][1]:
-                    unb += 1
-                else:
-                    winners.append(peacocks[x+1])
-
-            else:
-                pass
-
-            print(winners)
-                
-
-        peacocks = winners
-        
-
-    if unb > init_l:
-        unb = init_l
-
-    return unb
+    return w
 
 
 # do not modify below

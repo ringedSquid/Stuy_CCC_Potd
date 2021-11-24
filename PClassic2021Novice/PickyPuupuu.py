@@ -1,5 +1,6 @@
 def magicSquare(grid):
-    pass
+    
+
 
 tests = int(input().strip())
 for test in range(tests):
